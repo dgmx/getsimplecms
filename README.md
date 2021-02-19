@@ -11,8 +11,8 @@ Creamos una carpeta llamada webphp donde vamos a establecer el Dockerfile.
 Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descargado de la web de getsimple y renombramos la carpeta generada a simplecms.
 
 
-# Archivo DockerFile:
-:::python  
+Archivo DockerFile:
+
 
     FROM ubuntu:bionic  
     EXPOSE 80  
