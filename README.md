@@ -16,25 +16,25 @@ Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descarga
 
     FROM ubuntu:bionic  
     EXPOSE 80  
-ENV DEBIAN_FRONTEND=noninteractive  
-ENV TZ=Europe/Madrid  
-RUN apt update && \  
-apt upgrade -y && \  
-apt install -y apache2 php libapache2-mod-php && \  
-apt install -y php-xml php-curl php-gd php-zip  
-COPY web /var/www/html/  
-RUN chown -R www-data:www-data /var/www/html/  
-RUN a2enmod rewrite  
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]  
+    ENV DEBIAN_FRONTEND=noninteractive  
+    ENV TZ=Europe/Madrid  
+    RUN apt update && \  
+    apt upgrade -y && \  
+    apt install -y apache2 php libapache2-mod-php && \  
+    apt install -y php-xml php-curl php-gd php-zip  
+    COPY web /var/www/html/  
+    RUN chown -R www-data:www-data /var/www/html/  
+    RUN a2enmod rewrite  
+    ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]  
 
 Ejecutamos docker build:  
-:::console  
-$ docker build -t simplecms .  
+
+    $ docker build -t simplecms .  
 
 Docker Run:  
-:::console  
-$ docker run -d --rm -p 80:80 -v simplecms_data:/var/www/html/simplecms simplecms  
+
+    $ docker run -d --rm -p 80:80 -v simplecms_data:/var/www/html/simplecms simplecms  
 
 Acceder a una shell del contenedor:  
-:::bash  
-$ docker exec -it id /bin/bash  
+
+    $ docker exec -it id /bin/bash  
