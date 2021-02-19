@@ -4,7 +4,7 @@ Instalación de un cms xml en docker para la asignatura de Lenguaje de Marcas de
 
 GetSimple es un sistema de gestión de contenido ligero, autónomo, totalmente independiente y basado en XML. GetSimple es runa forma sencilla de administrar un sitio web para pequeñas empresas. No necesita un servidor de bases de datos para almacenar la información
 
-Getasimple se puede descargar desde su web oficial:  
+GetSimple se puede descargar desde su web oficial:  
 <http://get-simple.info>
 
 # Instalación. Docker
