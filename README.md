@@ -7,7 +7,9 @@ GetSimple es un sistema de gestión de contenido ligero, autónomo, totalmente i
 # Instalación. Docker
 
 Creamos una carpeta llamada webphp donde vamos a establecer el Dockerfile.
+
 Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descargado de la web de getsimple y renombramos la carpeta generada a simplecms.
+
 
 # Archivo DockerFile:
 
@@ -25,10 +27,13 @@ RUN a2enmod rewrite
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 Ejecutamos docker build:
+
 $ docker build -t simplecms .
 
 Docker Run:
+
 $ docker run -d --rm -p 80:80 -v simplecms_data:/var/www/html/simplecms simplecms 
 
 Acceder a una shell del contenedor:
+
 $ docker exec -it id /bin/bash
