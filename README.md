@@ -12,8 +12,8 @@ Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descarga
 
 
 # Archivo DockerFile:
-
-' FROM ubuntu:bionic 
+:::python
+FROM ubuntu:bionic 
 EXPOSE 80
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Madrid
@@ -27,13 +27,13 @@ RUN a2enmod rewrite
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"] '
 
 Ejecutamos docker build:
-
+:::console
 $ docker build -t simplecms .
 
 Docker Run:
-
+:::console
 $ docker run -d --rm -p 80:80 -v simplecms_data:/var/www/html/simplecms simplecms 
 
 Acceder a una shell del contenedor:
-
+:::console
 $ docker exec -it id /bin/bash
