@@ -14,8 +14,8 @@ Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descarga
 # Archivo DockerFile:
 :::python  
 
-FROM ubuntu:bionic  
-EXPOSE 80  
+    FROM ubuntu:bionic  
+    EXPOSE 80  
 ENV DEBIAN_FRONTEND=noninteractive  
 ENV TZ=Europe/Madrid  
 RUN apt update && \  
