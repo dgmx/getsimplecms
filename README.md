@@ -13,7 +13,7 @@ Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descarga
 
 # Archivo DockerFile:
 
-'FROM ubuntu:bionic 
+' FROM ubuntu:bionic 
 EXPOSE 80
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Madrid
@@ -24,7 +24,7 @@ apt install -y php-xml php-curl php-gd php-zip
 COPY web /var/www/html/ 
 RUN chown -R www-data:www-data /var/www/html/
 RUN a2enmod rewrite
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]'
+ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"] '
 
 Ejecutamos docker build:
 
