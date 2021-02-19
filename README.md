@@ -12,7 +12,8 @@ Creamos la carpeta web dentro de webphp donde descomprimimos el archivo descarga
 
 
 # Archivo DockerFile:
-:::python
+:::python  
+
 FROM ubuntu:bionic  
 EXPOSE 80  
 ENV DEBIAN_FRONTEND=noninteractive  
